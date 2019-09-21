@@ -22,7 +22,7 @@ weixin_crawler尚处于维护之中, 方案有效, 请放心尝试. weixin_crawl
 
 如果你想先看看这个项目是否有趣，这段不足3分钟的介绍视频一定是你需要的
 If you want to check if weixin_crawler is interesting or powerful enougth, this video will help to save time
-https://www.youtube.com/watch?v=CbfLRCV7oeU&t=8s
+https://www.youtube.com/watch?v=CbfLRCV7oeU&t
 
 ## 写在最开始
 
