@@ -7,7 +7,7 @@
 - 推出的商用版公众号数据分析软件——微搜 https://www.youtube.com/watch?v=Z-N1ex8H3Yg ，技术方案正是来自weixin_crawler
 ## 文末有彩蛋，送给有孩子的工程师爸爸
 
-如果你和我一样是一个有孩子的工程师，相信也一定面临这多重挑战和压力，文末我给你准备了一个小彩蛋，希望在家庭教育上，能给你多一份自信
+如果你和我一样是一个有孩子的工程师，相信也一定面临着多重挑战和压力，文末我给你准备了一个小彩蛋，希望在家庭教育上，能给你多一份自信。带孩子本可以很轻松...
 
 ## weixin_crawler 已经私有化（私有化之前Star2.4K ）,爬虫仍旧有效, 遇到反爬会在知识星球发布新代码
 
@@ -26,10 +26,6 @@ weixin_crawler尚处于维护之中, 方案有效, 请放心尝试. weixin_crawl
 如果你想先看看这个项目是否有趣，这段不足3分钟的介绍视频一定是你需要的
 If you want to check if weixin_crawler is interesting or powerful enougth, this video will help to save time
 https://www.youtube.com/watch?v=CbfLRCV7oeU&t
-
-## 写在最开始
-
-如果你的时间有限，不是以技术研究为主要目的，只是需要采集公众号的数据，从而可以专注自己做更擅长、更能创造价值的事情。不妨试试商用软件WCplus3.0，由weixin_crawler作者设计并实现，同时支持Mac和Window系统 https://shimo.im/docs/dA7ejdOQuPwo7NZV/ 
 
 ## 主要特点
 
