@@ -81,63 +81,64 @@ weixin_crawler已经在Win/Mac/Linux系统下运行成功, 建议优先使用win
 weixin_crawler could work on win/mac/linux, although it is suggested to try on win os firstly
 
 > #### Insatall  mongodb / redis / elasticsearch and run them in the background
-> 
+>
 > 1. downlaod mongodb / redis / elasticsearch from their official sites and install them
-> 
+>
 > 2. run them at the same time under the default configuration. In this case mongodb is localhost:27017 redis is localhost:6379(or you have to config in weixin_crawler/project/configs/auth.py)
-> 
+>
 > 3. Inorder to tokenize Chinese, *elasticsearch-analysis-ik* have to be installed for Elasticsearch
-> 
+>
 > #### Install proxy server and run proxy.js
-> 
+>
 > 1. install nodejs and then npm install anyproxy and redis in weixin_crawler/proxy
-> 
+>
 > 2. cd to weixin_crawler/proxy and run node proxy.js
-> 
+>
 > 3. install anyproxy https CA in both computer and phone side
-> 
+>
 > 4. if you are not sure how to use anyproxy, [here ](https://github.com/alibaba/anyproxy)is the doc
-> 
+>
 > #### Install the needed python packages
-> 
+>
 > 1. NOTE: you may can not simply type pip install -r requirements.txt to install every package, twisted is one of them which is needed by scrapy. When you get some problems about installing python package(twisted for instance), [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/) always have a solution——downlod the right version package to your drive and run $ pip install package_name
-> 
+>
 > 2. I am not sure if your python enviroment will throw other package not found error, just install any package that is needed
-> 
+>
 > #### Some source code have to be modified(maybe it is not reasonable)
-> 
+>
 > 1. scrapy Python36\Lib\site-packages\scrapy\http\request\ \__init\__.py  --> weixin_crawler\source_code\request\\__init\__.py
-> 
+>
 > 2. scrapy Python36\Lib\site-packages\scrapy\http\response\ \__init\__.py --> weixin_crawler\source_code\response\\\__init\__.py
-> 
+>
 > 3. pyecharts Python36\Lib\site-packages\pyecharts\base.py --> weixin_crawler\source_code\base.py. In this case function get_echarts_options is added in line 106
-> 
+>
 > #### If you want weixin_crawler work automatically those steps are necessary or you shoud operate the phone to get the request data that will be detected by Anyproxy manual
-> 
+>
 > 1. Install adb and add it to your path(windows for example)
-> 
+>
 > 2. install android emulator(NOX suggested) or plugin your phone and make sure you can operate them with abd from command line tools
-> 
+>
 > 3. If mutiple phone are connected to your computer you have to find out their adb ports which will be used to add crawler
-> 
+>
 > 4. adb does not support Chinese input, this is a bad news for weixin official account searching. In order to input Chinese, adb keyboard has to be installed in your android phone and set it as the default input method, more is [here](https://github.com/senzhk/ADBKeyBoard)
-> 
+>
 > Why could weixin_crawler work automatically? Here is the reason:
-> 
+>
+> - Wechat 7.03 or lower version is required
 > - If you want to crawl a wechat official account, you have to search the account in you phone and click its "全部消息" then you will get a message list , if you roll down more lists will be loaded.  Anyone of the messages in the list could be taped if you want to crawl this account's reading data
 > - If a nickname of a wechat official account is given, then wexin_crawler operate the wechat app installed in a phone, at the same time anyproxy is 'listening background'...Anyway weixin_crawler get all the request data requested by wechat app, then it is the show time for scrapy
 > - As you supposed, in order to let weixin_crawler operate wechat app we have to tell adb where to click swap and input,  most of them are defined in weixin_crawler/project/phone_operate/config.py. BTW phone_operate is responsible for wechat operate just like human beings, its eyes are baidu OCR API and predefined location tap area, its fingers are adb
-> 
+>
 > #### Run the main.py
-> 
+>
 > $ cd weixin_crawler/project/
-> 
+>
 > $ python(3) ./main.py
-> 
+>
 > Now open the browser and everything you want would be in localhost:5000.
-> 
+>
 > In this long step list you may get stucked, join our community for help, tell us what you have done and what kind of error you have found.
-> 
+>
 > Let's go to explore the world in localhost:5000 together
 
 ## 功能展示

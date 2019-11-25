@@ -1,5 +1,5 @@
 def main():
-    print('This script is used to tell github: I am a python repo. Contact author to get source code')
+    print('尽情阅读和修改源码吧 祝你好运')
 
 if __name__ == '__main__':
     main()
