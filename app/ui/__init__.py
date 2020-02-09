@@ -1,7 +1,7 @@
 from ui.ui_instance import app, socketio, the_redis
 from Application.gzh_category import GZHCategory
 from Application.gzh_crawler import GZHCrawler
-from es.setting import  GZHSearchSetting
+from es.setting import GZHSearchSetting
 
 # 公众号爬虫应用实例
 gc = GZHCrawler()
@@ -12,7 +12,8 @@ gzh_setting = GZHSearchSetting()
 
 
 def run_webserver():
-    socketio.run(app, host= '0.0.0.0')
+    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+
 
 def run_gzh_crawler():
     import time
@@ -25,5 +26,3 @@ def run_gzh_crawler():
 # 延迟import是为了防止递归import
 from ui.router import *
 from ui.event import *
-
-

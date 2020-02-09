@@ -3,7 +3,7 @@
 from flask import Flask
 from flask_socketio import SocketIO
 import redis
-from configs.auth import REDIS_HOST,REDIS_PORT,REDIS_DB
+from configs.auth import REDIS_HOST, REDIS_PORT, REDIS_DB
 
 
 class CustomFlask(Flask):
@@ -15,7 +15,7 @@ class CustomFlask(Flask):
 
 
 # 定义作为web服务器常用的公用实例对象 方便其余程序直接import
-app = CustomFlask('WeixinCrawler',template_folder="./ui/templates",static_folder="./ui/static")
+app = CustomFlask('WeixinCrawler', template_folder="./ui/templates", static_folder="./ui/static")
 # app = CustomFlask('WeixinCrawler',template_folder="./templates",static_folder="./static")
 app.config['SECRET_KEY'] = 'secret!'
 # socketio = SocketIO(app)

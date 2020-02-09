@@ -13,12 +13,14 @@ SECRET_KEY = ''
 Mongodb 数据库运行参数
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 MONGODB_NAME = 'WeixinData4'
-MONGODB_HOST = 'localhost'
+# MONGODB_HOST = 'localhost'
+MONGODB_HOST = 'hwc_mongo'
 MONGODB_PORT = 27017
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 redis 运行端口参数
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-REDIS_HOST = 'localhost'
+REDIS_HOST = 'hwc_redis'
+# REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 0

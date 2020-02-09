@@ -1,6 +1,7 @@
 Scrapy==1.5.1
 twisted
-pywin32
+qrcode
+# pywin32
 Flask==1.0.2
 Flask-SocketIO==3.0.2
 gevent==1.3.7
