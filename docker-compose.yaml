@@ -35,6 +35,18 @@ services:
       - "6379:6379"
     networks:
       - hwc_es7net
+  mysql:
+    image: mysql:8.0
+    container_name: hwc_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=xinyue
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    networks:
+      - hwc_es7net
+
   weixin_crawler:
     image: weixin_crawler:latest
     container_name: hwc_weixin_crawler
