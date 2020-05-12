@@ -1,3 +1,4 @@
+from configs.auth import APP_PORT
 from ui.ui_instance import app, socketio, the_redis
 from Application.gzh_category import GZHCategory
 from Application.gzh_crawler import GZHCrawler
@@ -12,7 +13,7 @@ gzh_setting = GZHSearchSetting()
 
 
 def run_webserver():
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
+    socketio.run(app, host='0.0.0.0', port=APP_PORT, debug=True)
 
 
 def run_gzh_crawler():
