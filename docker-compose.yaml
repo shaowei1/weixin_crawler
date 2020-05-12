@@ -33,6 +33,7 @@ services:
     container_name: hwc_redis
     ports:
       - "6379:6379"
+      - "8379:6379"
     networks:
       - hwc_es7net
   mysql:
@@ -42,6 +43,7 @@ services:
       - MYSQL_ROOT_PASSWORD=xinyue
     ports:
       - "3306:3306"
+      - "8306:3306"
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     networks:
@@ -74,6 +76,7 @@ services:
         hard: -1
     volumes:
       - hwc_es7data_hot:/usr/share/elasticsearch/data
+      - "./elasticsearch/plugins/ik:/usr/share/elasticsearch/plugins/ik"
     ports:
       - 9200:9200
     networks:
@@ -95,6 +98,7 @@ services:
         hard: -1
     volumes:
       - hwc_es7data_warm:/usr/share/elasticsearch/data
+      - "./elasticsearch/plugins/ik:/usr/share/elasticsearch/plugins/ik"
     networks:
       - hwc_es7net
   elasticsearch3:
@@ -114,6 +118,7 @@ services:
         hard: -1
     volumes:
       - hwc_es7data_cold:/usr/share/elasticsearch/data
+      - "./elasticsearch/plugins/ik:/usr/share/elasticsearch/plugins/ik"
     networks:
       - hwc_es7net
 
@@ -132,3 +137,5 @@ networks:
 
   #sysctl -w vm.max_map_count=262144  #宿主机
   #pip install docker-compose
+
+#  https://www.jianshu.com/p/fefe506bc902
